@@ -15,9 +15,16 @@ function placeOnOrbit(items: readonly OrbitService[], offset = 0) {
   }));
 }
 
-const outerTags = placeOnOrbit(orbitServices.slice(0, 8), 6);
-const middleTags = placeOnOrbit(orbitServices.slice(8, 16), 28);
-const innerTags = placeOnOrbit(orbitServices.slice(16), 12);
+const outerTags = placeOnOrbit(orbitServices.slice(0, 6), 6);
+const middleTags = placeOnOrbit(orbitServices.slice(6, 12), 28);
+const innerTags = placeOnOrbit(orbitServices.slice(12), 12);
+
+const mobileFloatChips = [
+  { id: "seo", label: "SEO", className: "c1" },
+  { id: "reels", label: "Reels", className: "c2" },
+  { id: "ads", label: "Ads", className: "c3" },
+  { id: "shopify", label: "Shopify", className: "c4" },
+] as const;
 
 function OrbitTags({
   items,
@@ -76,6 +83,20 @@ export function Hero() {
     <section id="home" ref={ref} className="hero-pin" data-theme={heroTheme}>
       <motion.div className="hero" style={reduced ? undefined : { backgroundColor: bg, color }}>
         <div className="hero-stage">
+          <div className="hero-mobile-ambience" aria-hidden="true">
+            <span className="hero-float-orb o1" />
+            <span className="hero-float-orb o2" />
+            <span className="hero-float-orb o3" />
+            <span className="hero-float-spark s1" />
+            <span className="hero-float-spark s2" />
+            <span className="hero-float-spark s3" />
+            <span className="hero-float-dot d1" />
+            <span className="hero-float-dot d2" />
+            <span className="hero-float-dot d3" />
+            <span className="hero-float-dot d4" />
+            <span className="hero-float-dot d5" />
+            <span className="hero-float-dot d6" />
+          </div>
           <div className={`hero-orbit-wrap ${reduced ? "is-static" : ""}`}>
             <span className="hero-core-glow" aria-hidden="true" />
             <div className="hero-rings" aria-hidden="true">
@@ -104,6 +125,23 @@ export function Hero() {
               <motion.p className="hero-lead" style={reduced ? undefined : { color: muted }}>
                 {company.hero.lead}
               </motion.p>
+              <div className="hero-visual">
+                <div className="hero-visual-float" aria-hidden="true">
+                  {mobileFloatChips.map((chip) => (
+                    <span key={chip.id} className={`hero-float-chip ${chip.className}`}>
+                      {chip.label}
+                    </span>
+                  ))}
+                </div>
+                <img
+                  className="hero-home-image"
+                  src="/home-image.png"
+                  alt="Grow your brand with SEO, social media, content, advertising, and more"
+                  width={488}
+                  height={511}
+                  decoding="async"
+                />
+              </div>
               <div className="hero-actions">
                 <button className="btn btn-primary" onClick={() => scrollToId("contact")}>
                   Talk to us

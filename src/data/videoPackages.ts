@@ -54,13 +54,13 @@ export const videoPackages = [
 
 export const videoLongForm = {
   title: "LONG-FORM VIDEOS",
-  price: "₹999 per video",
-  note: "Long-form videos are NOT included in any package and will be charged separately.",
+  price: "₹999",
+  unit: "per video",
+  note: "Not included in any package — charged separately.",
 };
 
 export const videoNotes = [
   "Short videos (Reels) are included in the selected package.",
-  "For long videos, we charge ₹999 per video.",
   "Advertising budget is NOT included in the package fee.",
 ] as const;
 

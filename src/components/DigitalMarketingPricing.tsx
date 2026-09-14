@@ -11,7 +11,6 @@ import { goToContact } from "../lib/contact";
 
 export function DigitalMarketingPricing() {
   const [duration, setDuration] = useState<DurationKey>("1m");
-  const [openId, setOpenId] = useState<string | null>("business");
 
   return (
     <section id="pricing-digital" className="pricing-block">
@@ -39,7 +38,6 @@ export function DigitalMarketingPricing() {
         <div className="plan-grid plan-grid-3">
           {digitalMarketingPlans.map((plan) => {
             const price = plan.pricing[duration];
-            const open = openId === plan.id;
             return (
               <article key={plan.id} className={`plan-card ${plan.popular ? "is-popular" : ""}`}>
                 {plan.popular ? <div className="badge">Most Popular</div> : null}
@@ -54,14 +52,7 @@ export function DigitalMarketingPricing() {
                     <strong>Total amount · {price.total}</strong>
                   </p>
                 </div>
-                <button
-                  className="plan-more"
-                  aria-expanded={open}
-                  onClick={() => setOpenId(open ? null : plan.id)}
-                >
-                  {open ? "Hide features" : "View features"}
-                </button>
-                <ul className={`plan-features ${open ? "is-open" : ""}`}>
+                <ul className="plan-features">
                   {digitalMarketingFeatureOrder.map((feature) => (
                     <li key={feature}>
                       <span>{feature}</span>

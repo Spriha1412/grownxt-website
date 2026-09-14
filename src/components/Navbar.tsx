@@ -65,6 +65,7 @@ export function Navbar() {
         >
           <span />
           <span />
+          <span />
         </button>
       </div>
 

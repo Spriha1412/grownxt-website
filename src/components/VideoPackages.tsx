@@ -47,13 +47,15 @@ export function VideoPackages() {
         </div>
 
         <div className="video-extras">
-          <article className="video-longform">
-            <h3>{videoLongForm.title}</h3>
-            <strong>{videoLongForm.price}</strong>
-            <p>{videoLongForm.note}</p>
-          </article>
-          <article>
+          <article className="video-notes">
             <h3>Important Notes</h3>
+            <div className="video-longform-price">
+              <span>{videoLongForm.title}</span>
+              <strong>
+                {videoLongForm.price} <em>{videoLongForm.unit}</em>
+              </strong>
+              <p>{videoLongForm.note}</p>
+            </div>
             <ul>
               {videoNotes.map((note) => (
                 <li key={note}>{note}</li>

@@ -204,7 +204,7 @@ section[id] {
 @media (max-width: 720px) {
   .container,
   .container-wide {
-    width: min(1180px, calc(100% - 28px));
+    width: min(1180px, calc(100% - 40px));
   }
 
   .note-row {

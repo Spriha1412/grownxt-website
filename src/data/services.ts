@@ -68,16 +68,12 @@ export const orbitServices = [
   { id: "apps", name: "Mobile App Development", tag: "Mobile Apps" },
   { id: "google-ads", name: "Google Ads", tag: "Google Ads" },
   { id: "meta-ads", name: "Meta Ads", tag: "Meta Ads" },
-  { id: "instagram", name: "Instagram Marketing", tag: "Instagram" },
-  { id: "linkedin", name: "LinkedIn Marketing", tag: "LinkedIn" },
-  { id: "local-seo", name: "Local SEO", tag: "Local SEO" },
   { id: "video", name: "Video & Reels", tag: "Video Reels" },
   { id: "logo", name: "Logo Design", tag: "Logo Design" },
   { id: "graphics", name: "Graphic Design", tag: "Graphic Design" },
   { id: "copy", name: "Content Writing", tag: "Copywriting" },
   { id: "cro", name: "Conversion Rate Optimization", tag: "CRO" },
   { id: "landing", name: "Landing Pages", tag: "Landing Pages" },
-  { id: "woocommerce", name: "WooCommerce Development", tag: "WooCommerce" },
 ] as const;
 
 export const milestones = [
