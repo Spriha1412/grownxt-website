@@ -9,7 +9,6 @@ export function Footer() {
       <div className="container footer-grid">
         <div>
           <Logo variant="dark" />
-          <p>{company.tagline}</p>
         </div>
         <div>
           <h3>Quick Links</h3>

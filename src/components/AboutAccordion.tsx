@@ -53,13 +53,11 @@ function AboutDesktopCard({
     >
       <span>0{index + 1}</span>
       <h3>{card.title}</h3>
-      <motion.div
-        className="about-card-body"
-        animate={open ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
-        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <p>{card.body}</p>
-      </motion.div>
+      <div className="about-card-body">
+        {card.body.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
     </motion.article>
   );
 }
@@ -117,7 +115,9 @@ export function AboutAccordion({ progress, staticLayout }: AboutAccordionProps) 
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <p>{card.body}</p>
+                    {card.body.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
                   </motion.div>
                 )}
               </AnimatePresence>

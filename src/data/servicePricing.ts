@@ -60,8 +60,3 @@ export const servicePricing = [
     ],
   },
 ] as const;
-
-export const servicePricingNote =
-  "Prices are in INR (₹) and may vary based on project scope and requirements.";
-
-export const servicePricingCta = "Get in touch for a customized quote.";

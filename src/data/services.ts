@@ -5,8 +5,9 @@ export const services = [
     name: "Social Media Marketing",
     tag: "Social Media",
     title: "SOCIAL MEDIA MARKETING",
-    body: "A social presence with a point of view. We plan the platforms, the content rhythm, and the paid support so people stop, remember you, and come back.",
-    points: ["Platform strategy", "Content systems", "Community + paid social"],
+    what: "We help you show up on Instagram, Facebook, LinkedIn, and other apps your customers already use. That means a simple plan, regular posts, replies to comments, and ads when you need extra reach, not random content posted at the last minute.",
+    why: "This is where people spend time every day. If they never see you there, they will not remember you when they need what you sell. A clear, regular presence helps people know you, trust you, and choose you.",
+    points: ["Which platforms to use", "Regular content", "Posts plus ads"],
   },
   {
     id: "seo",
@@ -14,8 +15,9 @@ export const services = [
     name: "SEO",
     tag: "SEO",
     title: "SEO",
-    body: "Search that adds up. Technical foundations, useful pages, and authority work so the right people find you without renting every click.",
-    points: ["Technical + on-page", "Keyword systems", "Local and organic growth"],
+    what: "SEO is how people find you on Google. We fix the website so search engines can read it, write pages that answer real questions, and help you show up when someone nearby searches for your service.",
+    why: "Ads only work while you pay for them. Google can keep bringing you customers for months after the work is done. If you do not show up in search, your competitor will, and you will keep paying for every visitor.",
+    points: ["Website fixes", "The right keywords", "Local Google results"],
   },
   {
     id: "content",
@@ -23,8 +25,9 @@ export const services = [
     name: "Content Marketing",
     tag: "Content",
     title: "CONTENT MARKETING",
-    body: "Stories and pages that teach, sell, and stay useful. From articles to brand films, we make work that earns attention instead of chasing it.",
-    points: ["Editorial plans", "Brand storytelling", "Authority-led assets"],
+    what: "We write and make useful things for your brand: blogs, videos, posts, and pages that explain what you do. The goal is simple: help people understand you, and give them a reason to come back.",
+    why: "People buy from companies they understand. Good content answers their questions before they call you. It also helps your website, social media, and ads work better, because there is something real to share.",
+    points: ["Content plan", "Brand stories", "Blogs, videos, and pages"],
   },
   {
     id: "performance",
@@ -32,8 +35,9 @@ export const services = [
     name: "Performance Marketing",
     tag: "Performance",
     title: "PERFORMANCE MARKETING",
-    body: "Media with a job. Meta, Google, and remarketing shaped around leads, sales, and the unit economics you actually care about.",
-    points: ["Full-funnel campaigns", "Conversion tracking", "Creative testing"],
+    what: "This is paid advertising on Google, Facebook, Instagram, and similar platforms. We set up the ads, track who clicks and who buys, test different creatives, and put more budget on what actually brings leads or sales.",
+    why: "If you need customers sooner, ads can get you in front of the right people fast. Without tracking, you only know you spent money, not what you got back. Clear numbers tell you what to keep running and what to stop.",
+    points: ["Google and Meta ads", "Lead and sale tracking", "Test what works"],
   },
   {
     id: "branding",
@@ -41,8 +45,9 @@ export const services = [
     name: "Branding & Creative Design",
     tag: "Branding",
     title: "BRANDING & CREATIVE DESIGN",
-    body: "Identity that feels inevitable. We name the difference, design the system, and give every channel the same spine.",
-    points: ["Visual identity", "Campaign design", "Brand systems"],
+    what: "This is how your business looks and sounds: logo, colours, fonts, photos, and the design of your ads and posts. We make sure everything feels like the same company, whether someone sees you online or offline.",
+    why: "If your look keeps changing, people will not remember you. A clear brand makes you easy to spot and easier to trust. Good design is not just looking nice. It helps people recognise you and feel confident buying from you.",
+    points: ["Logo and look", "Ad and post design", "One clear brand"],
   },
   {
     id: "web",
@@ -50,8 +55,9 @@ export const services = [
     name: "Website & Digital Solutions",
     tag: "Websites",
     title: "WEBSITE & DIGITAL SOLUTIONS",
-    body: "Sites and journeys built to convert — fast, clear, and ready for the campaigns that will run through them.",
-    points: ["Marketing websites", "Landing systems", "Analytics-ready builds"],
+    what: "We build websites and landing pages that load quickly, explain what you offer, and make it easy to enquire or buy. We also set up tracking so you can see which pages and ads actually bring customers.",
+    why: "Ads and posts send people to your website. If the site is slow, confusing, or hard to use on a phone, those people leave, and the money you spent to bring them is wasted. A good website turns visitors into enquiries.",
+    points: ["Business websites", "Landing pages", "Easy to track results"],
   },
 ] as const;
 
@@ -80,7 +86,7 @@ export const milestones = [
   {
     id: "presence",
     title: "Growing Digital Presence",
-    body: "Helping companies take up space on the platforms that matter — and look like they belong there.",
+    body: "Helping companies take up space on the platforms that matter, and look like they belong there.",
   },
   {
     id: "stories",
@@ -95,7 +101,7 @@ export const milestones = [
   {
     id: "growth",
     title: "Moving Towards Bigger Growth",
-    body: "Stretching what we can take on — more channels, sharper offers, stronger digital craft.",
+    body: "Stretching what we can take on, with more channels, sharper offers, and stronger digital craft.",
   },
   {
     id: "campaigns",

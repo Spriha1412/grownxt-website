@@ -26,7 +26,11 @@ export function About() {
         <div className="container">
           <p className="eyebrow">About Us</p>
           <h2 className="section-title">A digital partner, not a vendor.</h2>
-          <p className="about-lead">{company.about.copy}</p>
+          <div className="about-lead">
+            {company.about.copy.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
           <AboutAccordion progress={scrollYProgress} staticLayout={staticLayout} />
         </div>
       </div>

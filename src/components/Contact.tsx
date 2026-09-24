@@ -62,9 +62,9 @@ export function Contact() {
 
     setSubmitting(true);
     try {
-      const subject = encodeURIComponent(`GrowNXT enquiry — ${values.service}`);
+      const subject = encodeURIComponent(`GrowNXT enquiry: ${values.service}`);
       const body = encodeURIComponent(
-        `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nCompany: ${values.company || "—"}\nService: ${values.service}\n\n${values.message}`
+        `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nCompany: ${values.company || "Not provided"}\nService: ${values.service}\n\n${values.message}`
       );
       window.location.href = `${company.contact.emailHref}?subject=${subject}&body=${body}`;
       setStatus("success");
@@ -192,7 +192,7 @@ export function Contact() {
           </button>
           {status === "success" && (
             <p className="form-success" role="status">
-              Thank you. Your enquiry is ready to send — we will be in touch shortly.
+              Thank you. Your enquiry is ready to send. We will be in touch shortly.
             </p>
           )}
           {status === "error" && (

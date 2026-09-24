@@ -6,26 +6,31 @@ import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 import { scrollToId } from "../lib/utils";
 
 function ServiceCardFace({
-  index,
   title,
-  body,
+  what,
+  why,
   points,
   name,
 }: {
-  index: string;
   title: string;
-  body: string;
+  what: string;
+  why: string;
   points: readonly string[];
   name: string;
 }) {
   return (
     <article className="service-card">
-      <div className="service-card-top">
-        <span>{index}</span>
-        <strong>What We Do</strong>
-      </div>
       <h3>{title}</h3>
-      <p>{body}</p>
+      <div className="service-copy">
+        <div>
+          <h4>What it is</h4>
+          <p>{what}</p>
+        </div>
+        <div>
+          <h4>Why it matters</h4>
+          <p>{why}</p>
+        </div>
+      </div>
       <ul className="service-points">
         {points.map((point) => (
           <li key={point}>{point}</li>
@@ -51,21 +56,19 @@ function StickyServiceCard({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 22%", "end start"],
+    offset: ["start 110px", "end start"],
   });
-  const scale = useTransform(scrollYProgress, [0, 0.7, 1], [1, 0.96, 0.9]);
-  const blur = useTransform(scrollYProgress, [0, 1], [0, 5]);
-  const filter = useTransform(blur, (value) => `blur(${value}px)`);
-  const y = useTransform(scrollYProgress, [0, 1], [0, -24]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, -10]);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.4) onActive(index);
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) onActive(index);
       },
-      { threshold: [0.4, 0.65], rootMargin: "-16% 0px -30% 0px" }
+      { threshold: [0.5, 0.75], rootMargin: "-10% 0px -28% 0px" }
     );
     io.observe(node);
     return () => io.disconnect();
@@ -73,11 +76,11 @@ function StickyServiceCard({
 
   return (
     <div ref={ref} className="service-slot" style={{ zIndex: index + 1 }}>
-      <motion.div className="service-slot-face" style={{ scale, filter, y }}>
+      <motion.div className="service-slot-face" style={{ scale, y }}>
         <ServiceCardFace
-          index={service.index}
           title={service.title}
-          body={service.body}
+          what={service.what}
+          why={service.why}
           points={service.points}
           name={service.name}
         />
@@ -117,9 +120,9 @@ export function StackedServiceCards() {
           {services.map((service) => (
             <ServiceCardFace
               key={service.id}
-              index={service.index}
               title={service.title}
-              body={service.body}
+              what={service.what}
+              why={service.why}
               points={service.points}
               name={service.name}
             />

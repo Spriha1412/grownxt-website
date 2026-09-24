@@ -5,8 +5,8 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Mission } from "./components/Mission";
 import { Services } from "./components/Services";
+import { StackedVideos } from "./components/StackedVideos";
 import { Milestones } from "./components/Milestones";
-import { Pricing } from "./components/Pricing";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
@@ -23,8 +23,8 @@ export default function App() {
         <About />
         <Mission />
         <Services />
+        <StackedVideos />
         <Milestones />
-        <Pricing />
         <Contact />
       </main>
       <Footer />
